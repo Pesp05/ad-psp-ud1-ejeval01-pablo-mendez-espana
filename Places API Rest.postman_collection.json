@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "f915f40e-f958-426f-b6d5-82f6d71e1b04",
+		"name": "Places API Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38639647"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/place",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPlace",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Burguer King\",\r\n    \"address\": \"Triana\",\r\n    \"coords\": \"789, 9809\",\r\n    \"desc\": \"Mu weno to\",\r\n    \"imagen\": \"https://imagen.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/place",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/place/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"place",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModifyPlace",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Burguer King\",\r\n    \"address\": \"La Campana\",\r\n    \"coords\": \"789, 9809\",\r\n    \"desc\": \"Mu weno to\",\r\n    \"tags\": [],\r\n    \"image\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/place/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"place",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePlace",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/place/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"place",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTag",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/place/1/tag/add/comida_rapida",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"place",
+						"1",
+						"tag",
+						"add",
+						"comida_rapida"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveTag",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/place/1/tag/remove/comida_rapida",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"place",
+						"1",
+						"tag",
+						"remove",
+						"comida_rapida"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
